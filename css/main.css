@@ -650,7 +650,8 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: absolute;
-    left: 21%;
+    /* left: 21%; */
+    left:7rem;
 }
 .kakaobox>p:hover {
     cursor: pointer;
@@ -679,7 +680,8 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: absolute;
-    left: 26%;
+    /* left: 26%; */
+    left:9rem;
 }
 .gitbox>p:hover {
     cursor: pointer;
