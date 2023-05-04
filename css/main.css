@@ -654,6 +654,11 @@
     /* left:7rem; */
     left:6vw;
 }
+@media (min-width:1700px){
+    .kakaobox>p:after{
+        left:5vw;
+    }
+}
 .kakaobox>p:hover {
     cursor: pointer;
 }
@@ -684,6 +689,12 @@
     /* left: 26%; */
     /* left:9rem; */
     left:7.5vw;
+}
+
+@media (min-width:1700px){
+    .gitbox>p:after{
+        left:6.7vw;
+    }
 }
 .gitbox>p:hover {
     cursor: pointer;
