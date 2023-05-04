@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANA's portfolio</title>
+    <!---- animate.css cdn ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!---- fontawesome cdn ---->
+    <script src="https://kit.fontawesome.com/0c99aebf9b.js" crossorigin="anonymous"></script>
+    <!---- swiper cdn ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/door.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <!---- 구글 애널리틱스 ---->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J9DK23VE6B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-J9DK23VE6B');
+    </script>
+    <!------------------------------------------------------------------------------->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        window.onload = function () {
+            var data = ['PROFILE', 'SKILL','PROJECT', 'CONTACT',''];
+            // var data1 = ['MOMOCASE', 'MONAMI', 'MILLIE', 'OUTBACK', 'ROMISTORY']
+
+            var swiper = new Swiper(".mySwiper", {
+                direction: "vertical",
+                slidesPerView: 1,
+                spaceBetween: 50,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (i, className) {
+                        return `<li class= ${className}> ${data[i]}</span>`;
+                    },
+                },
+                mousewheel: true,
+                speed: 700,
+                on:{
+                    slideChange:function(){
+                        if(swiper.activeIndex==4){
+                            $(".closedoor_outside").addClass("outro_closedoor");
+                            $(".closedoor_outside").removeClass("outro_closedoor_trans");
+                            $(".cursor").hide();
+                        }
+                        // console.log(swiper.activeIndex)
+                        if(swiper.activeIndex==3){
+                            $(".closedoor_outside").removeClass("outro_closedoor");
+                            $(".closedoor_outside").addClass("outro_closedoor_trans");
+                            $(".cursor").show();
+                        }
+                    }
+                }
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                spaceBetween: 50,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    // renderBullet: function (i, className) {
+                    //     return `<li class= ${className}> ${data1[i]}</span>`;
+                    // },
+                },
+                keyboard: {
+                        enabled: true,
+                    },
+                speed: 700,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="intro-wrap">
+            <div class="intro">
+                <i class="fa-solid fa-minus knock"></i>
+                <i class="fa-solid fa-minus knock"></i>
+                <i class="fa-solid fa-minus knock"></i>
+                <i class="fa-solid fa-minus knock"></i>
+                <i class="fa-solid fa-minus knock"></i>
+                <i class="fa-solid fa-hand-back-fist circle"></i>
+                <div class="opendoor">
+                    <div class="opendoor_inside"></div>
+                    <div class="opendoor_outside"></div>
+                </div>
+                <p>HANA'S PORTFOLIO</p>
+            </div>
+        </div>
+        <div class="rotate-repeat-circle">
+            <div class="repeat-circle"></div>
+            <img src="img/portfolio.png" alt="hana's portfolio" class="repeat">
+        </div>
+        <i class="fa-solid fa-heart cursor"></i>
+        <div class="swiper mySwiper swiper-v">
+            <ul class="swiper-pagination nav">
+                <li>PROFILE</li>
+                <li>SKILL</li>
+                <li>PROJECT</li>
+                <li>CONTACT</li>
+            </ul>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide scroll-swiper profile-wrap">
+                    <div class="text-box">
+                        <span class="text"></span><span class="blink">|</span>
+                    </div>
+                    <div class="profile">
+                        <h1>변화를 두려워 하지 않고 성실하게 꾸준히 발전해나가는 개발자가 되겠습니다.</h1>
+                        <div class="profile-img">
+                            <img src="img/me.png" alt="hana's picture 사진 자리">
+                        </div>
+                        <div class="profile-box">
+                            <ul class="aboutme">
+                                <li><b>ABOUT ME</b></li>
+                                <li>
+                                    <p>Name</p>
+                                    <p>장하나</p>
+                                </li>
+                                <li>
+                                    <p>Birth</p>
+                                    <p>1995. 03. 14</p>
+                                </li>
+                            </ul>
+                            <ul class="certification">
+                                <li><b>CERTIFICATE</b></li>
+                                <li>
+                                    <p>2023.04</p>
+                                    <p>웹디자인기능사</p>
+                                </li>
+                                <li>
+                                    <p>2022.08</p>
+                                    <p>컴퓨터활용능력 2급</p>
+                                </li>
+                            </ul>
+                            <ul class="education">
+                                <li><b>EDUCATION</b></li>
+                                <li>
+                                    <p>22.10.31~23.05.09</p>
+                                    <p>웹표준기반 스마트UI/UX 디자인& 웹퍼블리셔 수료 예정</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="mouse">
+                        <span class="scroll_line"></span>
+                        <span class="scroll_move"></span>
+                    </div>
+                </div>
+                <div class="swiper-slide scroll-swiper skill">
+                    <div class="mouse">
+                        <span class="scroll_line"></span>
+                        <span class="scroll_move"></span>
+                    </div>
+                    <h1 class="skill-hd">Try to HOVER&nbsp;<i class="fa-regular fa-hand-pointer"></i></h1>
+                    <div class="skill-wrap">
+                        <div>
+                            <img src="img/html.svg" alt="html">
+                            <p>HTML</p>
+                            <div class="skill-text">
+                                <p>HTML의 기본 구조를 이해하고 웹 접근성을 고려해 다양한 태그를 사용하여 마크업을 작성 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/css.svg" alt="css">
+                            <p>CSS</p>
+                            <div class="skill-text">
+                                <p>브라우저 호환성을 고려하여 CSS 코드를 작성 할 수 있고 CSS 애니메이션과 트랜지션을 구현 할 수 있으며 미디어쿼리를 활용해 반응형 레이아웃을 구현 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/scss.svg" alt="scss">
+                            <p>SCSS</p>
+                            <div class="skill-text">
+                                <p>@mixin, @include를 활용해 코드의 재사용성을 높일 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/swiper.png" alt="swiper">
+                            <p>Swiper js</p>
+                            <div class="skill-text">
+                                <p>swiper js를 이해하고 적절하게 사용할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/javascript.svg" alt="javascript">
+                            <p>JavaScript</p>
+                            <div class="skill-text">
+                                <p>자바스크립트를 이해하고 동적으로 HTML 문서를 조작하고 다양한 종류의 이벤트(setInterval, setTimeout) 및 인터랙티브 기능을 구현 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/jquery.png" alt="jquery">
+                            <p>jQuery</p>
+                            <div class="skill-text">
+                                <p>jQuery를 이해하고 HTML 문서를 선택하고, 이벤트 핸들링과 클릭, 마우스 오버 및 터치 이벤트 등을 구현 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/react.svg" alt="react">
+                            <p>React</p>
+                            <div class="skill-text">
+                                <p>React의 주요 개념인 컴포넌트와 state, props, Router를 이해하고 동적인 UI와 라우팅 방식을 구현 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/vue.svg" alt="Vue">
+                            <p>Vue.js</p>
+                            <div class="skill-text">
+                                <p>컴포넌트와 props를 이해하고 활용할 수 있습니다.<p>
+                            </div>
+                        </div>
+                       
+                        <div>
+                            <img src="img/photoshop.png" alt="photoshop">
+                            <p>Photoshop</p>
+                            <div class="skill-text">
+                                <p>규격에 맞게 이미지를 잘라내고 색을 변경하고 이미지의 용량을 줄이는 등 웹 페이지 제작 시 필요한 이미지를 편집 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/illustrator.png" alt="illustrator">
+                            <p>Illustrator</p>
+                            <div class="skill-text">
+                                <p>기본적인 툴 사용이 가능하고 패스파인더 및 각종 도형 툴을 응용하여 로고 및 이미지를 제작 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/figma.png" alt="figma">
+                            <p>figma</p>
+                            <div class="skill-text">
+                                <p>툴을 이용해 와이어프레임과 프로토타입 파일을 제작 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-github skill-git"></i>
+                            <p>github</p>
+                            <div class="skill-text">
+                                <p>깃 백업, 관리를 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <h1 class="try">Try to Swipe
+                        <i class="fa-solid fa-chevron-right go-right"></i>
+                        <i class="fa-solid fa-chevron-right go-right"></i>
+                        <i class="fa-solid fa-chevron-right go-right"></i>
+                    </h1>
+                    <div class="swiper mySwiper2 swiper-h">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide react">
+                                <div class="mouse">
+                                    <span class="scroll_move"></span>
+                                </div>
+                                <div class="project-wrap">
+                                    <div class="project-text">
+                                        <div class="text-hd">
+                                            <h1>MOMOCASE</h1>
+                                            <div class="text-hd-imfor">
+                                                REACT / 반응형 / 개인 100% 작업
+                                            </div>
+                                        </div>
+                                        <!-- <h1 class="text-hd">MOMOCASE <span></span></h1> -->
+                                        <div class="text-main">
+                                            <div class="textbox react-textbox">
+                                                <ul>
+                                                    <li>React / Redux / React의 Bootstrap을 이용해 구현한 핸드폰 케이스 사이트입니다.</li>
+                                                    <li>Router로 홈, 상품 상세 페이지, 장바구니, 로그인 페이지를 생성했고 세부 내용은 Components를 생성해서 구현했습니다.</li>
+                                                    <li>BootStrap을 이용해 반응형 페이지를 구현했습니다.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="textbox-btm">
+                                                <ul>
+                                                    <li>- 메인 페이지 : 1개</li>
+                                                    <li>- 상품 상세 페이지 : 8개</li>
+                                                    <li>- 장바구니 페이지 : 1개</li>
+                                                    <li>- 로그인 페이지 : 1개</li>
+                                                </ul>
+                                                <div class="colorbox react-colorbox">
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#444</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#F6F6F6</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#E9E9E9</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#F57C00</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="language">
+                                            <div>#HTML</div>
+                                            <div>#SCSS</div>
+                                            <div>#Javascript</div>
+                                            <div>#React / Redux</div>
+                                            <div>#BootStrap</div>
+                                        </div>
+                                        <div id="btn-container">
+                                            <div class="page-wrap page-wrap-one">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/momocase')">
+                                                    메인
+                                                </button>
+                                            </div>
+                                            <div class="pdf-wrap">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/momocase/momocase.pdf')">
+                                                    문서화
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-imgbox">
+                                        <div class="project-pc-thumnail">
+                                            <img src="img/pcscreen.png" alt="pc 화면" class="pcscreen">
+                                            <div class="project-pc-imgbox react-pc">
+                                                <div class="pc-hover-box">hover</div>
+                                                <img src="img/react-main.jpg" alt="momocase">
+                                            </div>
+                                        </div>
+                                        <div class="project-phone-thumnail">
+                                            <img src="img/mobilescreen.png" alt="모바일 화면" class="phonescreen">
+                                            <div class="project-phone-imgbox react-mobile">
+                                                <div class="mobile-hover-box">hover</div>
+                                                <img src="img/react-mobile.jpg" alt="momocase">
+                                            </div>
+                                        </div>
+                                        <div class="speech-bubble react-bubble">
+                                            <ul>
+                                                <li>* 각 페이지를 바로 확인하고 싶으시다면 밑의 설명대로 클릭하시면 확인하실 수 있습니다.</li>
+                                                <li>- 상품 상세 페이지 : "베스트" 메뉴를 누르고 화면이 이동되면 각 상품 클릭</li>
+                                                <li>- 로그인 페이지 : 사람 모양 클릭</li>
+                                                <li>- 장바구니 페이지 : 쇼핑백 모양 클릭</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide teamplay">
+                                <div class="mouse">
+                                    <span class="scroll_line"></span>
+                                    <span class="scroll_move"></span>
+                                </div>
+                                <div class="project-wrap">
+                                    <div class="project-text">
+                                        <div class="text-hd">
+                                            <h1>MONAMI</h1>
+                                            <div class="text-hd-imfor">
+                                                팀 프로젝트 / 반응형 / 개인 50%(메인) 작업
+                                            </div>
+                                        </div>
+                                        <!-- <h1 class="text-hd">MONAMI <span></span></h1> -->
+                                        <div class="text-main">
+                                            <div class="textbox">
+                                                <ul>
+                                                    <li>3명이 한 팀이 되어 만든 반응형 사이트입니다.</li>
+                                                    <li>실제 모나미 페이지와 비슷하게 만들려고 했고 배치는 모든 요소가 한 눈에 들어 올 수 있게 변경했습니다.</li>
+                                                    <li>포인트색으로 로고에 간단한 변화를 주었습니다.</li>
+                                                    <li>저는 <span class="monami-point">메인 페이지 전체</span> 를 담당했습니다.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="textbox-btm">
+                                                <ul class="monami-page">
+                                                    <li>- 메인 페이지 : 1개(담당)</li>
+                                                    <li>- 서브 페이지 : 4개</li>
+                                                </ul>
+                                                <div class="colorbox monami-colorbox">
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#222</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#F1F1F1</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#C40F39</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#63318A</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="language">
+                                            <div>#HTML</div>
+                                            <div>#CSS</div>
+                                            <div>#JavaScript</div>
+                                            <div>#jQuery</div>
+                                            <div>#Media Query</div>
+                                        </div>
+                                        <div id="btn-container">
+                                            <div class="page-wrap page-wrap-one">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/Team_project/')">
+                                                    메인
+                                                </button>
+                                            </div>
+                                            <div class="pdf-wrap">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/Team_project/monami.pdf')">
+                                                    문서화
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-imgbox">
+                                        <div class="project-pc-thumnail">
+                                            <img src="img/pcscreen.png" alt="pc 화면" class="pcscreen">
+                                            <div class="project-pc-imgbox monami-pc">
+                                                <div class="pc-hover-box">hover</div>
+                                                <img src="img/monami-main.jpg" alt="monami-pc">
+                                            </div>
+                                        </div>
+                                        <div class="project-phone-thumnail">
+                                            <img src="img/mobilescreen.png" alt="모바일 화면" class="phonescreen">
+                                            <div class="project-phone-imgbox monami-mobile">
+                                                <div class="mobile-hover-box">hover</div>
+                                                <img src="img/monami-mobile.png" alt="monami-mobile">
+                                            </div>
+                                        </div>
+                                        <div class="speech-bubble monami-bubble">
+                                            <ul>
+                                                <li>* 서브 페이지는 모나미제품, 고객지원을 누르면 확인하실 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide bookstore">
+                                <div class="mouse">
+                                    <span class="scroll_line"></span>
+                                    <span class="scroll_move"></span>
+                                </div>
+                                <div class="project-wrap">
+                                    <div class="project-text">
+                                        <div class="text-hd">
+                                            <h1>밀리의 서재</h1>
+                                            <div class="text-hd-imfor">
+                                                Open API ( AJAX / JSON ) / 개인 100% 작업
+                                            </div>
+                                        </div>
+                                        <!-- <h1 class="text-hd">밀리의 서재 <span></span></h1> -->
+                                        <div class="text-main">
+                                            <div class="textbox mille-textbox">
+                                                <ul>
+                                                    <li>카카오 오픈 API와 AJAX를 이용해 제작한 밀리의 서재 사이트입니다.</li>
+                                                    <li>메인 페이지에서는 AJAX를 이용해 오픈 API에서 책 정보를, 서브 페이지에서는 양이 많은 내용을 텍스트 파일로 만들어 "get" 으로 불러왔습니다.</li>
+                                                    <li>밀리의 서재 포인트 색상인 "<span style="color:#ffeb60">#FFEB60</span>"은 명도가 높아 가독성이 떨어져 서브페이지의 포인트 색상은 주황색 계열의 색상과 함께 사용했습니다.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="textbox-btm">
+                                                <ul>
+                                                    <li>- 메인 페이지 : 1개</li>
+                                                    <li>- 서브 페이지 : 1개</li>
+                                                </ul>
+                                                <div class="colorbox millie-colorbox">
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#333</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#F7F7F7</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#FFEB60</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#FA9319</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="language">
+                                            <div>#HTML</div>
+                                            <div>#SCSS</div>
+                                            <div>#JavaScript</div>
+                                            <div>#jQuery</div>
+                                            <div>#Open API</div>
+                                            <div>#AJAX / JSON</div>
+                                        </div>
+                                        <div id="btn-container">
+                                            <div class="page-wrap">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/millie/')">
+                                                    메인
+                                                </button>
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/millie/sub.html')">
+                                                    서브
+                                                </button>
+                                            </div>
+                                            <div class="pdf-wrap">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/millie/millie.pdf')">
+                                                    문서화
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-imgbox">
+                                        <div class="project-pc-thumnail">
+                                            <img src="img/pcscreen.png" alt="pc 화면" class="pcscreen">
+                                            <div class="project-pc-imgbox millie-pc">
+                                                <div class="pc-hover-box">hover</div>
+                                                <img src="img/millie-main.jpg" alt="millie-pc">
+                                            </div>
+                                        </div>
+                                        <div class="speech-bubble millie-bubble">
+                                            <ul>
+                                                <li>* 메뉴, 독서 시작하기 버튼을 클릭하시면 서브 페이지 확인 하실 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide outback">
+                                <div class="mouse">
+                                    <span class="scroll_line"></span>
+                                    <span class="scroll_move"></span>
+                                </div>
+                                <div class="project-wrap">
+                                    <div class="project-text">
+                                        <div class="text-hd">
+                                            <h1>OUTBACK</h1>
+                                            <div class="text-hd-imfor">
+                                                반응형 / 개인 100% 작업
+                                            </div>
+                                        </div>
+                                        <!-- <h1 class="text-hd">OUTBACK<span></span></h1> -->
+                                        <div class="text-main">
+                                            <div class="textbox outback-textbox">
+                                                <ul>
+                                                    <li>처음으로 만든 반응형 사이트입니다.</li>
+                                                    <li>메뉴가 영어로 된 사이트들이 많아 이 페이지에서는 영어로 메뉴를 만들되 메뉴에 hover시 한글로 변경되는 효과를 구현해봤습니다.</li>
+                                                    <li>모달팝업을 구현했고 헤더의 "reserve"와 중간에 "Book A Table"을 누르면 확인하실 수 있습니다.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="textbox-btm">
+                                                <ul>
+                                                    <li>- 메인 페이지 : 1개</li>
+                                                    <li>- 서브 페이지 : 1개</li>
+                                                </ul>
+                                                <div class="colorbox outback-colorbox">
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#3F3F3F</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#FFFAFA</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#C30606</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="language">
+                                            <div>#HTML</div>
+                                            <div>#CSS</div>
+                                            <div>#JavaScript</div>
+                                            <div>#jQuery</div>
+                                            <div>#Media Query</div>
+                                        </div>
+                                        <div id="btn-container">
+                                            <div class="page-wrap">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/project_2/')">
+                                                    <span class="btn-circle" aria-hidden="true">
+                                                        <span class="icon arrow"></span>
+                                                    </span>
+                                                    <span class="button-text">메인</span>
+                                                </button>
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/project_2/sub.html')">
+                                                    <span class="btn-circle" aria-hidden="true">
+                                                        <span class="icon arrow"></span>
+                                                    </span>
+                                                    <span class="button-text">서브</span>
+                                                </button>
+                                            </div>
+                                            <div class="pdf-wrap">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/project_2/outback.pdf')">
+                                                    <span class="btn-circle" aria-hidden="true">
+                                                        <span class="icon arrow"></span>
+                                                    </span>
+                                                    <span class="button-text">문서화</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-imgbox">
+                                        <div class="project-pc-thumnail">
+                                            <img src="img/pcscreen.png" alt="pc화면" class="pcscreen">
+                                            <div class="project-pc-imgbox outback-pc">
+                                                <div class="pc-hover-box">hover</div>
+                                                <img src="img/outback-main.jpg" alt="outback-pc">
+                                            </div>
+                                        </div>
+                                        <div class="project-phone-thumnail">
+                                            <img src="img/mobilescreen.png" alt="모바일 화면" class="phonescreen">
+                                            <div class="project-phone-imgbox outback-mobile">
+                                                <div class="mobile-hover-box">hover</div>
+                                                <img src="img/outback-mobile.jpg" alt="outback-mobile">
+                                            </div>
+                                        </div>
+                                        <div class="speech-bubble outback-bubble">
+                                            <ul>
+                                                <li>* 서브 페이지는 메뉴나 슬라이드 이미지를 누르시면 확인하실 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide shopping">
+                                <div class="mouse">
+                                    <span class="scroll_line"></span>
+                                    <span class="scroll_move"></span>
+                                </div>
+                                <div class="project-wrap">
+                                    <div class="project-text">
+                                        <div class="text-hd">
+                                            <h1>ROMISTORY</h1>
+                                            <div class="text-hd-imfor">
+                                                웹표준 / 개인 100% 작업
+                                            </div>
+                                        </div>
+                                        <!-- <h1 class="text-hd">ROMISTORY <span></span></h1> -->
+                                        <div class="text-main">
+                                            <div class="textbox romi-textbox">
+                                                <ul>
+                                                    <li>제가 자주 이용하는 쇼핑몰을 리뉴얼 해보고 싶은 생각에 쇼핑몰에 어울리는 레이아웃을 찾아 그에 맞춰 구현해봤습니다.</li>
+                                                    <li>제이쿼리만 조금 배운 상태로 시작한 프로젝트로 간단한 기능들만 구현했습니다.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="textbox-btm">
+                                                <ul>
+                                                    <li>- 메인 페이지 : 1개</li>
+                                                    <li>- 서브 페이지 : 1개</li>
+                                                </ul>
+                                                <div class="colorbox romi-colorbox">
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#FF6347</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#C4AB96</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#866849</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#af8989</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="color"></div>
+                                                        <div class="color-text">#D3D3D3</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="language">
+                                            <div>#HTML</div>
+                                            <div>#CSS</div>
+                                            <div>#jQuery</div>
+                                        </div>
+                                        <div id="btn-container">
+                                            <div class="page-wrap">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/project_1/')">
+                                                    <span class="btn-circle" aria-hidden="true">
+                                                        <span class="icon arrow"></span>
+                                                    </span>
+                                                    <span class="button-text">메인</span>
+                                                </button>
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/project_1/sub.html')">
+                                                    <span class="btn-circle" aria-hidden="true">
+                                                        <span class="icon arrow"></span>
+                                                    </span>
+                                                    <span class="button-text">서브</span>
+                                                </button>
+                                            </div>
+                                            <div class="pdf-wrap">
+                                                <button class="go-site" onclick="window.open('https://hana-jang.github.io/project_1/romistory.pdf')">
+                                                    <span class="btn-circle" aria-hidden="true">
+                                                        <span class="icon arrow"></span>
+                                                    </span>
+                                                    <span class="button-text">문서화</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-imgbox">
+                                        <div class="project-pc-thumnail">
+                                            <img src="img/pcscreen.png" alt="pc 화면" class="pcscreen">
+                                            <div class="project-pc-imgbox romi-pc">
+                                                <div class="pc-hover-box">hover</div>
+                                                <img src="img/romi-main.jpg" alt="romi-pc">
+                                            </div>
+                                        </div>
+                                        <div class="speech-bubble romi-bubble">
+                                            <ul>
+                                                <li>* 서브 페이지는 메뉴나 슬라이드 이미지를 누르시면 확인하실 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <ul class="swiper-pagination nav1"></ul>
+                    </div>
+                </div>
+                <div class="swiper-slide scroll-swiper contact">
+                    <h1>CONTACT ME</h1>
+                    <div class="contact-wrap">
+                        <div class="kakaobox">
+                            <img src="img/kakao.png" alt="kakaotalk">
+                            <p onclick="window.open('https://open.kakao.com/o/sKXfK6gf')">https://open.kakao.com/o/sKXfK6gf</p>
+                        </div>
+                        <div class="emailbox">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>frontweb99@gmail.com</p>
+                        </div>
+                        <div class="gitbox">
+                            <i class="fa-brands fa-github"></i>
+                            <p onclick="window.open('https://github.com/hana-jang/')">https://github.com/hana-jang</p>
+                        </div>
+                    </div>
+                    <div class="mouse">
+                        <span class="scroll_line"></span>
+                        <span class="scroll_move"></span>
+                    </div>
+                </div>
+                <div class="swiper-slide outro-wrap">
+                    <div class="outro">
+                        <div class="closedoor">
+                            <div class="closedoor_inside"></div>
+                            <div class="closedoor_outside"></div>
+                        </div>
+                        <p>HANA'S PORTFOLIO</p>
+                        <p>THANK YOU</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>   
