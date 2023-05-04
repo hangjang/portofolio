@@ -185,6 +185,12 @@
     justify-items: center;
     gap:30px 0;
 }
+@media(min-width:1921px){
+    .skill-wrap{
+        width:90%;
+    }
+}
+
 .skill-wrap>div{
     /* width:270px; */
     width:230px;
