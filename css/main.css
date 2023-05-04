@@ -654,7 +654,7 @@
     /* left:7rem; */
     left:6vw;
 }
-@media (min-width:1700px){
+@media (min-width:1921px){
     .kakaobox>p:after{
         left:5vw;
     }
@@ -691,7 +691,7 @@
     left:7.5vw;
 }
 
-@media (min-width:1700px){
+@media (min-width:1921px){
     .gitbox>p:after{
         left:6.7vw;
     }
