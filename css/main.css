@@ -650,13 +650,13 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: absolute;
-    /* left: 21%; */
+    left: 21%;
     /* left:7rem; */
-    left:6vw;
+    /* left:6vw; */
 }
 @media (min-width:1921px){
     .kakaobox>p:after{
-        left:5vw;
+        left:23%;
     }
 }
 .kakaobox>p:hover {
@@ -686,14 +686,14 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: absolute;
-    /* left: 26%; */
+    left: 26%;
     /* left:9rem; */
-    left:7.5vw;
+    /* left:7.5vw; */
 }
 
 @media (min-width:1921px){
     .gitbox>p:after{
-        left:6.7vw;
+        left:17%;
     }
 }
 .gitbox>p:hover {
