@@ -32,7 +32,6 @@
     <script>
         window.onload = function () {
             var data = ['PROFILE', 'SKILL','PROJECT', 'CONTACT',''];
-            // var data1 = ['MOMOCASE', 'MONAMI', 'MILLIE', 'OUTBACK', 'ROMISTORY']
 
             var swiper = new Swiper(".mySwiper", {
                 direction: "vertical",
@@ -68,9 +67,6 @@
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
-                    // renderBullet: function (i, className) {
-                    //     return `<li class= ${className}> ${data1[i]}</span>`;
-                    // },
                 },
                 keyboard: {
                         enabled: true,
@@ -128,11 +124,11 @@
                             <ul class="aboutme">
                                 <li><b>ABOUT ME</b></li>
                                 <li>
-                                    <p>Name</p>
+                                    <p>이름</p>
                                     <p>장하나</p>
                                 </li>
                                 <li>
-                                    <p>Birth</p>
+                                    <p>생년월일</p>
                                     <p>1995. 03. 14</p>
                                 </li>
                             </ul>
@@ -224,6 +220,20 @@
                             <p>Vue.js</p>
                             <div class="skill-text">
                                 <p>컴포넌트와 props를 이해했습니다.<p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/ajax.png" alt="AJAX" class="ajax">
+                            <p>AJAX</p>
+                            <div class="skill-text">
+                                <p>AJAX 설명<p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="img/json.png" alt="JSON">
+                            <p>JSON</p>
+                            <div class="skill-text">
+                                <p>JSON 설명<p>
                             </div>
                         </div>
                         <div>
