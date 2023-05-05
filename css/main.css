@@ -185,7 +185,7 @@
     justify-items: center;
     gap:30px 0;
 }
-@media(min-width:1921px){
+@media(min-width:1930px){
     .skill-wrap{
         width:90%;
     }
@@ -362,14 +362,25 @@
 
 /* ========== < 리액트 > ========== */
 .react-colorbox {
-    width:21vw;
+    width:20vw;
 }
 .react-colorbox>div{
-    width:21%;
+    width:20%;
 }
 .react-colorbox>div>.color{
-    width:3vw;
+    width:2.7vw;
     height:60%;
+}
+@media (min-width:1921px){
+    .react-colorbox{
+        width:21vw;
+    }
+    .react-colorbox>div{
+        width:21%;
+    }
+    .react-colorbox>div>.color{
+        width:3vw;
+    }
 }
 .react-colorbox>div:nth-of-type(1)>.color{
     background-color: #444;
@@ -541,9 +552,16 @@
 .project-phone-thumnail{
     position:absolute;
     top:387px;
-    right:8vw;
+    /* right:8vw; */
+    right:25%;
     z-index:3;
 }
+@media (min-width:1921px){
+    .project-phone-thumnail{
+        right:30%;
+    }
+}
+
 .phonescreen{
     width:155px;
     position:absolute;
@@ -649,7 +667,7 @@
 .kakaobox img{
     width:90px;
     height:90px;
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 .kakaobox>p{
     position:relative;
@@ -662,15 +680,15 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: absolute;
-    left: 21%;
+    /* left: 21%; */
     /* left:7rem; */
     /* left:6vw; */
 }
-@media (min-width:1921px){
+/* @media (min-width:1921px){
     .kakaobox>p:after{
         left:23%;
     }
-}
+} */
 .kakaobox>p:hover {
     cursor: pointer;
 }
@@ -679,6 +697,9 @@
 }
 .contact-wrap>div{
     width:33.33%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact-wrap>div>i{
     font-size:100px;
@@ -686,6 +707,7 @@
 }
 .contact-wrap>div>p{
     font-size:20px;
+    display:inline-block;
 }
 .gitbox>p {
     position: relative;
@@ -698,16 +720,16 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: absolute;
-    left: 26%;
+    /* left: 26%; */
     /* left:9rem; */
     /* left:7.5vw; */
 }
 
-@media (min-width:1921px){
+/* @media (min-width:1921px){
     .gitbox>p:after{
         left:17%;
     }
-}
+} */
 .gitbox>p:hover {
     cursor: pointer;
 }
