@@ -14,6 +14,7 @@
     height: 100%;
 }
 .swiper-slide {
+    width:100%;
     text-align: center;
     position:relative;
 }
@@ -85,7 +86,6 @@
     color:#674f80;
 }
 
-/* project_nav(pagination) */
 .nav1{
     left:15px !important;
 }
@@ -173,8 +173,7 @@
 
 /* ========= 스킬 =========*/
 .skill-wrap{
-    /* width:1245px; */
-    width:80%;
+    width:85%;
     height:75%;
     position:absolute;
     top:50%;
@@ -185,14 +184,9 @@
     justify-items: center;
     gap:30px 0;
 }
-@media(min-width:1930px){
-    .skill-wrap{
-        width:90%;
-    }
-}
+
 
 .skill-wrap>div{
-    /* width:270px; */
     width:230px;
     height:100%;
     text-align: center;
@@ -203,6 +197,7 @@
     align-items: center;
     box-shadow: 0px 1px 5px #674f80;
 }
+
 .skill-wrap>div img{
     width:100px;
     height:100px;
@@ -270,7 +265,7 @@
 /* ========== < 리액트 > ========== */
 .project-wrap{
     width:88%;
-    height:710px;
+    height:77%;
     display:flex;
     align-items: center;
     margin:120px auto 0;
@@ -345,7 +340,7 @@
     justify-content: space-between;
 }
 .colorbox>div{
-    height:12vh;
+    height:110px;
     padding:10px;
     border:2px solid #674f80;
 }
@@ -362,28 +357,14 @@
 
 /* ========== < 리액트 > ========== */
 .react-colorbox {
-    min-width:20vw;
-    max-width: 21vw;
+    width:20vw;
 }
 .react-colorbox>div{
-    min-width:20%;
-    max-width: 21%;
+    width:20%;
 }
 .react-colorbox>div>.color{
-    min-width:2.7vw;
-    max-width:3vw;
+    width:2.7vw;
     height:60%;
-}
-@media (min-width : 1921px){
-    .react-colorbox{
-        width:21vw;
-    }
-    .react-colorbox>div{
-        width:21%;
-    }
-    .react-colorbox>div>.color{
-        width:3vw;
-    }
 }
 .react-colorbox>div:nth-of-type(1)>.color{
     background-color: #444;
@@ -400,13 +381,13 @@
 
 /* ========== < 팀플 > ========== */
 .monami-colorbox {
-    width:21vw;
+    width:20vw;
 }
 .monami-colorbox>div{
-    width:21%;
+    width:20%;
 }
 .monami-colorbox>div>.color{
-    width:3vw;
+    width:2.7vw;
     height:60%;
 }
 .monami-colorbox>div:nth-of-type(1)>.color{
@@ -424,13 +405,13 @@
 
 /* ========== < 밀리의서재 > ========== */
 .millie-colorbox {
-    width:21vw;
+    width:20vw;
 }
 .millie-colorbox>div{
-    width:21%;
+    width:20%;
 }
 .millie-colorbox>div>.color{
-    width:3vw;
+    width:2.7vw;
     height:60%;
 }
 .millie-colorbox>div:nth-of-type(1)>.color{
@@ -448,13 +429,13 @@
 
 /* ========== < 아웃백 > ========== */
 .outback-colorbox {
-    width:16vw;
+    width:15vw;
 }
 .outback-colorbox>div{
-    width:4.5vw;
+    width:29%;
 }
 .outback-colorbox>div>.color{
-    width:3vw;
+    width:2.7vw;
     height:60%;
 }
 .outback-colorbox>div:nth-of-type(1)>.color{
@@ -469,10 +450,13 @@
 
 /* ========== < 로미스토리 > ========== */
 .romi-colorbox {
-    width:25vw;
+    width:24vw;
+}
+.romi-colorbox>div{
+    width:17.5%;
 }
 .romi-colorbox>div>.color{
-    width:3vw;
+    width:2.7vw;
     height:60%;
 }
 .romi-colorbox>div:nth-of-type(1)>.color{
@@ -513,12 +497,16 @@
 .project-imgbox{
     width: 50%;
     height:100%;
+}
+.project-imgbox-wrap{
+    width:100%;
+    height:100%;
     position: relative;
 }
 .project-pc-thumnail{
     position:absolute;
     top:170px;
-    left:2.5vw;
+    left:10%;
 }
 .project-pc-thumnail>img{
     width:100%;
@@ -530,7 +518,7 @@
     overflow: hidden;
     position:absolute;
     top:4.4%;
-    left:3.3%;
+    left:3.6%;
     cursor:n-resize;
 }
 .pc-hover-box{
@@ -553,21 +541,15 @@
     left:0;
 }
 .project-phone-thumnail{
+    width:155px;
     position:absolute;
     top:387px;
-    /* right:8vw; */
-    right:25%;
+    right:5%;
     z-index:3;
-}
-@media (min-width:1921px){
-    .project-phone-thumnail{
-        right:30%;
-    }
 }
 
 .phonescreen{
-    width:155px;
-    position:absolute;
+    width:100%;
 }
 .project-phone-imgbox{
     width:143.5px;
@@ -575,7 +557,7 @@
     overflow: hidden;
     position: absolute;
     top:37px;
-    left:5.3px;
+    right:6px;
     cursor:n-resize;
 }
 .mobile-hover-box{
@@ -606,8 +588,11 @@
     background:url(../img/bubble2.png) center / contain no-repeat;
     position:absolute;
     top:-10px;
-    left:84px;
+    left:107px;
     text-align: left;
+}
+.speech-bubble ul li{
+    font-size:1vw;
 }
 .react-bubble ul{
     width:460px;
@@ -615,29 +600,32 @@
     top:34px;
     left:23px;
 }
+.react-bubble ul li{
+    font-size:16px;
+}
 .monami-bubble ul{
     width:460px;
     position:absolute;
-    top:70px;
-    left:28px;
+    top:60px;
+    left:23px;
 }
 .millie-bubble ul{
     width:460px;
     position:absolute;
-    top:70px;
-    left:28px;
+    top:60px;
+    left:23px;
 }
 .outback-bubble ul{
     width:460px;
     position:absolute;
-    top:70px;
-    left:28px;
+    top:60px;
+    left:23px;
 }
 .romi-bubble ul{
     width:460px;
     position:absolute;
-    top:70px;
-    left:28px;
+    top:60px;
+    left:23px;
 }
 
 
@@ -666,6 +654,20 @@
     transform: translate(-50%, -50%);
     display:flex;
 }
+.contact-wrap>div{
+    width:33.33%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-wrap>div>i{
+    font-size:100px;
+    margin-bottom:10px;
+}
+.contact-wrap>div>p{
+    font-size:20px;
+    display:inline-block;
+}
 
 .kakaobox img{
     width:90px;
@@ -683,35 +685,14 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: absolute;
-    /* left: 21%; */
-    /* left:7rem; */
-    /* left:6vw; */
 }
-/* @media (min-width:1921px){
-    .kakaobox>p:after{
-        left:23%;
-    }
-} */
 .kakaobox>p:hover {
     cursor: pointer;
 }
 .kakaobox>p:hover:after {
     transform: scaleX(1);
 }
-.contact-wrap>div{
-    width:33.33%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-.contact-wrap>div>i{
-    font-size:100px;
-    margin-bottom:10px;
-}
-.contact-wrap>div>p{
-    font-size:20px;
-    display:inline-block;
-}
+
 .gitbox>p {
     position: relative;
 }
@@ -723,16 +704,7 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     position: absolute;
-    /* left: 26%; */
-    /* left:9rem; */
-    /* left:7.5vw; */
 }
-
-/* @media (min-width:1921px){
-    .gitbox>p:after{
-        left:17%;
-    }
-} */
 .gitbox>p:hover {
     cursor: pointer;
 }

@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+@media (min-width:1700px) and (max-width:1919px){
+    .nav{
+        width:15%;
+    }
+    .project-phone-thumnail{
+        right:-3%;
+    }
+}
+
+@media (min-width: 1921px){
+    .skill-wrap{
+        width:90%;
+    }
+    .skill-wrap>div{
+        width:260px;
+    }
+
+    /* ========== project colorbox ========== */
+    .colorbox>div{
+        height:125px;
+    }
+
+    .react-colorbox{
+        width:21vw;
+    }
+    .react-colorbox>div{
+        width:21%;
+    }
+    .react-colorbox>div>.color{
+        width:3vw;
+    }
+    .monami-colorbox {
+        width:21vw;
+    }
+    .monami-colorbox>div{
+        width:21%;
+    }
+    .monami-colorbox>div>.color{
+        width:3vw;
+    }
+    .millie-colorbox {
+        width:21vw;
+    }
+    .millie-colorbox>div{
+        width:21%;
+    }
+    .millie-colorbox>div>.color{
+        width:3vw;
+    }
+    .outback-colorbox {
+        width:16vw;
+    }
+    .outback-colorbox>div{
+        width:4.5vw;
+    }
+    .outback-colorbox>div>.color{
+        width:3vw;
+    }
+    .romi-colorbox {
+        width:25vw;
+    }
+    .romi-colorbox>div{
+        width:4.3vw;
+    }
+    .romi-colorbox>div>.color{
+        width:3vw;
+    }
+
+    /* ========== project-text ========== */
+    .speech-bubble{
+        top:50px;
+        left:107px;
+    }
+    .project-pc-thumnail{
+        top:230px;
+    }
+    .project-phone-thumnail{
+        top:450px;
+        right:7%;
+    }
+    
+}
