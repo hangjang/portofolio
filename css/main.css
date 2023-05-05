@@ -362,16 +362,19 @@
 
 /* ========== < 리액트 > ========== */
 .react-colorbox {
-    width:20vw;
+    min-width:20vw;
+    max-width: 21vw;
 }
 .react-colorbox>div{
-    width:20%;
+    min-width:20%;
+    max-width: 21%;
 }
 .react-colorbox>div>.color{
-    width:2.7vw;
+    min-width:2.7vw;
+    max-width:3vw;
     height:60%;
 }
-@media (min-width:1921px){
+@media (min-width : 1921px){
     .react-colorbox{
         width:21vw;
     }
