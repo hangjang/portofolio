@@ -544,7 +544,8 @@
     width:155px;
     position:absolute;
     top:387px;
-    right:5%;
+    /* right:5%; */
+    right:0%;
     z-index:3;
 }
 
