@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 @media (min-width:1700px) and (max-width:1919px){
     .nav{
@@ -6,6 +6,29 @@
     }
     .project-phone-thumnail{
         right:-3%;
+    }
+    
+/* ========== project colorbox ========== */
+    .colorbox>div{
+        height:105px;
+    }
+    .react-colorbox{
+        width:21vw;
+    }
+    .react-colorbox>div{
+        width:21%;
+    }
+    .monami-colorbox {
+        width:21vw;
+    }
+    .monami-colorbox>div{
+        width:21%;
+    };
+    .millie-colorbox>div{
+        width:21%;
+    }
+    .millie-colorbox {
+        width:21vw;
     }
 }
 

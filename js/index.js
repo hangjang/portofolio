@@ -106,11 +106,21 @@ $(function () {
         $(this).prev().show();
     })
 
+    // 스킬 박스 위에 호버하면 글씨들 보였다 안 보였다
     $(".skill-text").hide();
     $(".skill-wrap>div").hover(function(){
         $(this).find("div").stop().fadeIn();
     },function(){
         $(this).find("div").stop().fadeOut();
+    });
+
+    // 프로젝트 메인, 서브, 문서화 버튼에 호버하면 글씨/마우스 색 변경
+    $(".go-site").hover(function(){
+        $(this).css("color","#fff9ee");
+        $(".cursor").css("color","#fff9ee");
+    },function(){
+        $(this).css("color","#674f80");
+        $(".cursor").css("color","#674f80");
     });
 });
 

@@ -62,9 +62,9 @@
     transition: width 150ms ease-in-out;
 }
 
-.go-site:hover {
+/* .go-site:hover {
     color: #FFF9EE;
-}
+}*/
 
 .go-site:hover:after {
     width: 110%;
