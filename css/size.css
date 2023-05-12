@@ -4,6 +4,10 @@
     .nav{
         width:15%;
     }
+    .swiper-slide .swiper-h{
+        width:85% !important;
+        margin: 0 0 0 15% !important;
+    }
     .project-phone-thumnail{
         right:-3%;
     }

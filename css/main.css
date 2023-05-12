@@ -80,10 +80,12 @@
 .swiper-button-prev{
     left:var(--swiper-navigation-sides-offset, 35px) !important;
     color:#674f80;
+    font-weight: bold;
 }
 .swiper-button-next{
     right:var(--swiper-navigation-sides-offset,30px) !important;
     color:#674f80;
+    font-weight: bold;
 }
 
 .nav1{
@@ -206,6 +208,9 @@
 .skill-wrap>div:nth-of-type(9) img{
     width:70%;
     height:45%;
+}
+.skill-wrap>div:nth-of-type(15) img{
+    margin-bottom:0;
 }
 .skill-git{
     width:100px;
