@@ -20,8 +20,9 @@
 
 .pdf-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 11px;
 }
 
 .page-wrap-one {
